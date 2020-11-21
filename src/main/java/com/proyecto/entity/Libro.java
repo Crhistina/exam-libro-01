@@ -22,16 +22,16 @@ public class Libro {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public int idLibro;
-	public String codigo;
-	public String titulo;
-	public String estado;
-	public String tipo;
+	private int idLibro;
+	private String codigo;
+	private String titulo;
+	private String estado;
+	private String tipo;
 	
 	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "idTipoLibro")
-	public TipoLibro Tipo;
+	private TipoLibro Tipo;
 
 
 }
